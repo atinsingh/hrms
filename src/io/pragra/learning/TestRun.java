@@ -1,10 +1,7 @@
 package io.pragra.learning;
 
 
-import io.pragra.learning.hrms.Contractor;
-import io.pragra.learning.hrms.Employee;
-import io.pragra.learning.hrms.HRMS;
-import io.pragra.learning.hrms.IEmployee;
+import io.pragra.learning.hrms.*;
 
 public class TestRun {
     public static void main(String[] args) {
@@ -22,6 +19,11 @@ public class TestRun {
         hrms.hire(employee1);
         hrms.displayDetails(employee1);
         hrms.terminate(employee1);
+
+        IEmployee emp = new TempEmployee();
+
+        hrms.hire(emp);
+        hrms.displayDetails(emp);
 
 
     }
